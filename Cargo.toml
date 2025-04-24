@@ -4,8 +4,47 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+alloy = "0.15.2"
+alloy-chains = "0.2.0"
+anyhow = "1.0.97"
+async-trait = "0.1.88"
 aws_lambda_events = { version = "0.15.1", default-features = false, features = ["eventbridge"] }
+axum = "0.8.3"
+bcrypt = "0.17.0"
+bigdecimal = { version = "0.4.8", features = ["serde"] }
+chrono = { version = "0.4.40", features = ["serde"] }
+clap = "4.5.36"
+dcap-rs = { git = "https://github.com/automata-network/dcap-rs.git" }
+dotenvy = "0.15.7"
+hex = "0.4.3"
+hyper = "1.6.0"
 lambda_runtime = "0.13.0"
-tokio = { version = "1", features = ["macros"] }
-aws-config = "1.6.1"
-aws-sdk-eventbridge = "1.69.0"
+mockall = "0.13.1"
+op-alloy = { version = "0.15.0", features = ["full"] }
+op-alloy-network = "0.15.0"
+openssl = { version = "0.10.72", features = ["vendored"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = { version = "1.0.140", features = ["alloc"] }
+sp1-sdk = "^4.1.0"
+sqlx = { version = "0.8.3", features = [
+    "runtime-tokio",
+    "tls-native-tls",
+    "postgres",
+    "chrono",
+    "bigdecimal",
+    "uuid"
+] }
+sqlx-cli = "0.8.3"
+strum = { version = "0.27.1", features = ["derive"] }
+strum_macros = "0.27.1"
+thiserror = "2.0.12"
+tokio = { version = "1.44.2", features = ["full"] }
+tower = { version = "0.5.2", features = ["full"] }
+tower-http = { version = "0.6.2", features = ["full"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+validator = { version = "0.20.0", features = ["derive"] }
+x509-parser = "0.17.0"
+
+[build-dependencies]
+sp1-helper = "4.0.1"
